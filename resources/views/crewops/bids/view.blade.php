@@ -36,6 +36,9 @@
                         <div class="card-action">
                             <a href="#" class="btn blue white-text" role="button">Details</a>
                             <a href="#" class="btn green white-text" role="button">Briefing</a>
+                            <a href="
+                            http://www.simbrief.com/system/dispatch.php?airline={{ $s->airline->icao }}&fltnum={{ $s->flightnum }}&type={{$s->aircraft->icao}}&orig={{ $s->depapt->icao }}&dest={{ $s->arrapt->icao }}
+                            " target=blank" class="btn orange white-text" role="button">SimBrief</a>
                             <a href="#" class="btn red white-text" role="button" onclick="event.preventDefault();
                                     document.getElementById('delete-bid{{ $s->id }}').submit();">Cancel</a>
                             <form id="delete-bid{{ $s->id }}" method="POST" action="{{ url('/flightops/bids/'.$s->id) }}" accept-charset="UTF-8" hidden>
